@@ -4,10 +4,10 @@ var path = require('path');
 
 var port = 8080;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'frontend')));
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 
 app.listen(port, function() {
